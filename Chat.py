@@ -32,10 +32,11 @@ def format_time(time):
 
 def run():
     while ip in data.col_values(1):
-        time.sleep(BOZO_NUMBER)
         if len(messages.get_all_records()) != 0:
             print(f"|{messages.acell('B2').value}||{format_time(messages.acell('D2').value)}| {messages.acell('C2').value}")
+            time.sleep(BOZO_NUMBER)
             clear_message()
+        time.sleep(BOZO_NUMBER)
 
 run()
 
